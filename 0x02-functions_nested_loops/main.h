@@ -1,6 +1,9 @@
 #ifndef _main_h_
 #define _main_h_
+<<<<<<< HEAD
 /*Main.h*/
+=======
+>>>>>>> 4527e0e105003e4f1babdfb6f3f1a2fb091b4740
 
 int _putchar(char c);
 
@@ -28,3 +31,4 @@ void print_to_98(int n);
 
 void print_times_table(int n);
 
+#endif
