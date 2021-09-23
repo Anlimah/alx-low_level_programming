@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates all the arguments of a program.
- * @ac: argument count.
- * @av: argument vector.
+ * ch_free_grid - frees a 2 dimensional array.
+ * @grid: multidimensional array of char.
+ * @height: height of the array.
  *
- * Return: pointer of an array of char
+ * Return: no return
  */
 void ch_free_grid(char **grid, unsigned int height)
 {
@@ -43,9 +43,7 @@ char **strtow(char *str)
 			height++;
 		}
 	}
-	
 	aout = malloc((height + 1) * sizeof(char *));
-	
 	if (aout == NULL || height == 0)
 	{
 		free(aout);
@@ -56,7 +54,9 @@ char **strtow(char *str)
 		for (c = a1; str[c] != '\0'; c++)
 		{
 			if (str[c] == ' ')
+			{
 				a1++;
+			}
 			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			{
 				aout[i] = malloc((c - a1 + 2) * sizeof(char));
